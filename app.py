@@ -128,8 +128,19 @@ def process_image(_image, threshold_val, contour_color, text_color, thickness):
 
 # --- SIDEBAR ---
 with st.sidebar:
+    # Custom HTML Student Card
+    st.markdown("""
+    <div class="student-card">
+        <b>👤 Submitted By:</b><br>
+        <span style="font-size: 1.1em;">Yasir Ahmad</span><br>
+        <span style="font-size: 0.9em; opacity: 0.8;">Reg: 22MIA1064</span><br>
+        <span style="font-size: 0.9em; opacity: 0.8;">Course: CSE3089</span>
+    </div>
+    """, unsafe_allow_html=True)
+    st.markdown("---")
     st.image("https://cdn-icons-png.flaticon.com/512/10051/10051283.png", width=60)
-    st.title("Settings")
+    st.title("ShapeLens")
+    st.markdown("### Settings")
     
     uploaded_file = st.file_uploader("📂 Upload Source Image", type=["jpg", "png", "jpeg"])
     
@@ -143,16 +154,8 @@ with st.sidebar:
     with col2:
         text_col = st.color_picker("Text Color", "#FF0000")
 
-    st.markdown("---")
-    # Custom HTML Student Card
-    st.markdown("""
-    <div class="student-card">
-        <b>👤 Submitted By:</b><br>
-        <span style="font-size: 1.1em;">Yasir Ahmad</span><br>
-        <span style="font-size: 0.9em; opacity: 0.8;">Reg: 22MIA1064</span><br>
-        <span style="font-size: 0.9em; opacity: 0.8;">Course: CSE3089</span>
-    </div>
-    """, unsafe_allow_html=True)
+    
+    
 
 # --- MAIN CONTENT ---
 
